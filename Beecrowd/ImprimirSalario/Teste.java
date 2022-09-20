@@ -1,23 +1,19 @@
 import java.util.Scanner;
 
 public class Teste{
-    public static void main(String[] args) throws Exception {
-        int cont = 0;
-        Scanner lerDados = new Scanner(System.in);
-        System.out.println("digite um valor para 'N' :");
-        int n = lerDados.nextInt();
+    public static void main(String[] args){
 
-        int i;
-        for(i = 0; i < n; ++i) {
-            System.out.print("" + i + " , ");
-        }
+        Scanner entrada = new Scanner(System.in);
+        int numero = 0, horas_trabalhadas = 0;
+        double valor_hora;
 
-        System.out.println("\n");
+        numero = entrada.nextInt();
+        horas_trabalhadas = entrada.nextInt();
+        valor_hora = entrada.nextDouble();
 
-        for(i = 1; i < n; ++i) {
-            cont += i;
-        }
+        String resultado = String.format("%.2f",(valor_hora*horas_trabalhadas));
 
-        System.out.print("soma : " + cont);
+        System.out.println("NUMBER = "+numero);
+        System.out.println("SALARY = U$ "+resultado.replace(',','.'));
     }
 }
